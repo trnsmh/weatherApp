@@ -16,31 +16,44 @@ import { dateOfToday, dayOfWeek } from "./helpers";
 export default function App() {
   const [search, setSearch] = useState("");
   const [select, setSelect] = useState("");
+  const [state, setState] = useState([]);
+  const [checker, setChecker] = useState(false);
 
   const handleClick = (event) => {
     if (search !== "" && select === "imperial") {
       API.citySearchFahr(search, select);
       const res = API.citySearchFahr(search, select);
       res.then((response, reject) => {
-        return console.log(response.main);
+        setState(response.main);
+        setTimeout(() => {
+          setChecker(true);
+        }, 5000);
+        return console.log(response);
       });
     } else if (search !== "" && select === "metric") {
       API.citySearchCelc(search, select);
       const res = API.citySearchFahr(search, select);
       res.then((response, reject) => {
-        return console.log(response.main);
+        setState(response);
+        setTimeout(() => {
+          setChecker(true);
+        }, 5000);
+        return console.log(response);
       });
     } else if (search !== "" && select === "kelvin") {
       API.citySearchKelv(search, select);
       const res = API.citySearchFahr(search, select);
       res.then((response, reject) => {
-        return console.log(response.main);
+        setState(response);
+        setTimeout(() => {
+          setChecker(true);
+        }, 5000);
+        return console.log(response);
       });
     } else {
-      alert("Please provide a city name!");
+      return alert("Please provide a city name!");
     }
   };
-
   //Date-Time
   let date = dateOfToday();
   let today = dayOfWeek();
@@ -51,12 +64,16 @@ export default function App() {
       <Search setSearch={setSearch} />
       <Option setSelect={setSelect} />
       <Button handleClick={handleClick} />
-      <City />
-      <p>{today.toUpperCase()}</p>
-      <Time value={date} format="MM/DD/YY" />
 
-      <Icon />
-      <Temp />
+      {checker === true && (
+        <div>
+          <p>{today.toUpperCase()}</p>
+          <Time value={date} format="MM/DD/YY" />
+          <City data={state} />
+          <Icon data={state} />
+          <Temp data={state} />
+        </div>
+      )}
     </div>
   );
 }

@@ -4,10 +4,11 @@ import styled from "styled-components";
 //import "../index.css";
 const Wrapper = styled.div``;
 
-const Temp = () => {
+const Temp = ({ data }) => {
+  let temp = data.main.temp;
   return (
     <Wrapper>
-      <p className="temp"> Temperature</p>
+      <h2>{temp}</h2>
     </Wrapper>
   );
 };
