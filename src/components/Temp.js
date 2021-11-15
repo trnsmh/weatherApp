@@ -4,12 +4,12 @@ import styled from "styled-components";
 //import "../index.css";
 const Wrapper = styled.div``;
 
-const City = () => {
+const Temp = () => {
   return (
     <Wrapper>
-      <p className="city">CityName</p>
+      <p className="temp"> Temperature</p>
     </Wrapper>
   );
 };
 
-export default City;
+export default Temp;

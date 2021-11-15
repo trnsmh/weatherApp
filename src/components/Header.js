@@ -1,18 +1,9 @@
 import React from "react";
 import styled from "styled-components";
+//styles
+//import "../index.css";
 
-const Wrapper = styled.div`
-  position: relative;
-  text-align: center;
-  width: 600px;
-  height: 100px;
-  border: 3px solid darkgray;
-  margin: 0 auto;
-  border-radius: 5px;
-  color: steelblue;
-  background-color: lightblue;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-`;
+const Wrapper = styled.div``;
 
 const Header = () => {
   return (

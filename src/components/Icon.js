@@ -1,19 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-
-const Wrapper = styled.div`
-    height:35px;
-    width:35px;
-`;
-
+//styles
+//import "../index.css";
+const Wrapper = styled.div``;
 
 const Icon = () => {
-
-
-
-
-
-
   return (
     <Wrapper>
       <img className="icon" src=" " alt="weather-icon" />
