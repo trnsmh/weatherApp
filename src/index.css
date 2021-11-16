@@ -1,0 +1,63 @@
+html,body> #root {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("./icons/weath1.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    width: 100% !important;
+    height: 100% !important;
+}
+#searchBar{
+    font-size: 25px;
+    border-radius: 7px;
+    font-weight:600;
+    max-width: 450px;
+    color: rgb(46, 46, 46);
+    border:3px solid rgb(80, 80, 80);
+    background-color:transparent;
+    font-family: "Merriweather", serif;
+    margin-left:30px;
+}
+#selector{
+    font-size: 25px;
+    border-radius: 7px;
+    font-weight:600;
+    color: rgb(46, 46, 46);
+    border:3px solid rgb(80, 80, 80);
+    background-color:transparent;
+    font-family: "Merriweather", serif;
+}
+#button{
+    font-size: 25px;
+    border:3px solid black;
+    border-radius: 7px;
+    font-weight:600;
+    color: rgb(46, 46, 46);
+    border:3px solid rgb(80, 80, 80);
+    background-color:transparent;
+    font-family: "Merriweather", serif;
+}
+.btn{
+    display:flex;
+    justify-content: center;
+
+}
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    border:3px solid  rgb(80, 80, 80);
+    color: rgb(46, 46, 46);
+    border-radius: 7px;
+    font-weight:600;
+    background-color:transparent;
+    width:200px;
+    margin:30px auto 0;
+}
+body > #root > div {
+    position: absolute;
+    width: 100% !important;
+    height: 100% !important;
+}

@@ -23,9 +23,6 @@ const getWeather = {
       : console.log(console.error());
     return await (await fetch(endpoint)).json();
   },
-
 };
-
-
 
 export default getWeather;

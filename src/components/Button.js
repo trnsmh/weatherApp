@@ -1,13 +1,21 @@
 import React from "react";
 import styled from "styled-components";
-
-const Wrapper = styled.div``;
+import "../index.css";
+const Wrapper = styled.div`
+`;
 function Button({ handleClick }) {
   return (
     <Wrapper>
-      <button id="btn" name="Search" className="btn" onClick={handleClick}>
-        Search
-      </button>
+      <div className="btn">
+        <button
+          id="button"
+          name="Search"
+          className="button"
+          onClick={handleClick}
+        >
+          Search
+        </button>
+      </div>
     </Wrapper>
   );
 }
