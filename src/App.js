@@ -22,16 +22,16 @@ export default function App() {
   const [loading, setLoading] = useState(false);
 
   const handleClick = (event) => {
+    setLoading(true);
     if (search !== "" && select === "imperial") {
       API.citySearchFahr(search, select);
       const res = API.citySearchFahr(search, select);
       res.then((response, reject) => {
         try {
-          setLoading(true);
           setState(response);
           setTimeout(() => {
-            setChecker(true);
             setLoading(false);
+            setChecker(true);
           }, 5000);
           return console.log(response);
         } catch (e) {
@@ -39,15 +39,15 @@ export default function App() {
         }
       });
     } else if (search !== "" && select === "metric") {
+      setLoading(true);
       API.citySearchCelc(search, select);
       const res = API.citySearchFahr(search, select);
       res.then((response, reject) => {
         try {
-          setLoading(true);
           setState(response);
           setTimeout(() => {
-            setChecker(true);
             setLoading(false);
+            setChecker(true);
           }, 5000);
           return console.log(response);
         } catch (e) {
@@ -55,15 +55,15 @@ export default function App() {
         }
       });
     } else if (search !== "" && select === "kelvin") {
+      setLoading(true);
       API.citySearchKelv(search, select);
       const res = API.citySearchFahr(search, select);
       res.then((response, reject) => {
         try {
-          setLoading(true);
           setState(response);
           setTimeout(() => {
-            setChecker(true);
             setLoading(false);
+            setChecker(true);
           }, 5000);
           return console.log(response);
         } catch (e) {
